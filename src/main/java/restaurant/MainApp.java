@@ -17,9 +17,7 @@ public class MainApp {
 
         System.out.println("===== RESTAURANT MANAGEMENT SYSTEM =====");
 
-        // -----------------------------
-        // Preloaded demo data
-        // -----------------------------
+      
         Staff chef = new Staff("Gordon", "Ramsay", Role.CHEF);
         Staff waiter = new Staff("John", "Doe", Role.WAITER);
 
@@ -70,9 +68,6 @@ public class MainApp {
                     System.out.println("✅ Customer Registered: " + currentCustomer.getFullName());
                 }
 
-                // ----------------------------------------
-                // 2. Create Order
-                // ----------------------------------------
                 case 2 -> {
                     if (currentCustomer == null) {
                         System.out.println("⚠ Register customer first!");
@@ -107,9 +102,6 @@ public class MainApp {
                     }
                 }
 
-                // ----------------------------------------
-                // 3. View all orders
-                // ----------------------------------------
                 case 3 -> {
                     System.out.println("📋 All Orders:");
                     Predicate<Order> allOrders = o -> true;
@@ -119,13 +111,9 @@ public class MainApp {
                     else orders.forEach(System.out::println);
                 }
 
-                // ----------------------------------------
-                // 4. OOP + RECORDS DEMO
-                // ----------------------------------------
+
                 case 4 -> {
-                    // System.out.println("\n--- STAFF (Inheritance) ---");
-                    // System.out.println(chef);
-                    // System.out.println(waiter);
+
 
                     System.out.println("\n--- MENU ITEMS (Records) ---");
                     System.out.println(burger);
@@ -133,9 +121,7 @@ public class MainApp {
                     System.out.println(pizza);
                 }
 
-                // ----------------------------------------
-                // 5. SEALED CLASSES (Payment)
-                // ----------------------------------------
+
                 case 5 -> {
                     System.out.println("\n--- PAYMENT DEMO ---");
 
@@ -148,9 +134,6 @@ public class MainApp {
                     online.process();
                 }
 
-                // ----------------------------------------
-                // 6. LAMBDA FILTER DEMO
-                // ----------------------------------------
                 case 6 -> {
                     System.out.println("\n--- HIGH VALUE ORDERS (> 20) ---");
 
@@ -161,9 +144,7 @@ public class MainApp {
                     else filtered.forEach(System.out::println);
                 }
 
-                // ----------------------------------------
-                // 7. EXCEPTION HANDLING DEMO
-                // ----------------------------------------
+   
                 case 7 -> {
                     System.out.println("\n--- EXCEPTION HANDLING DEMO ---");
 
@@ -174,9 +155,7 @@ public class MainApp {
                     }
                 }
 
-                // ----------------------------------------
-                // 8. DISCOUNT SYSTEM DEMO
-                // ----------------------------------------
+          
                 case 8 -> {
                     System.out.println("\n--- DISCOUNT DEMO ---");
 
@@ -192,9 +171,7 @@ public class MainApp {
                     System.out.println("After Discount: " + policy.apply(amount, currentCustomer));
                 }
 
-                // ----------------------------------------
-                // 9. Pattern matching demo
-                // ----------------------------------------
+
                 case 9 -> {
                     System.out.println("\n--- PATTERN MATCHING DEMO ---");
 
@@ -211,9 +188,6 @@ public class MainApp {
                     }
                 }
 
-                // ----------------------------------------
-                // 10. Exit
-                // ----------------------------------------
                 case 10 -> {
                     System.out.println("👋 Exiting...");
                     sc.close();
